@@ -59,7 +59,21 @@
 @fgood: darkent(@good, 15%);
 
 /* button stuff */
-@button_bg_primary: url('../img/button_bg.png') repeat-x bottom left @primary_color;
+@button_primary_bg_image: url('../img/button_bg.png') repeat-x;
+@button_primary_bg_color: @primary_color;
+
+@button_primary: @button_bg_image top left @button_primary_bg_color;
+@button_primary_border: darken(@primary_color, 10%);
+
+@button_primary_hover: @button_bg_image 0 0 @button_primary_hover_bg_color;
+@button_primary_hover_border: @primary_color;
+@button_primary_hover_bg_color: ligthen(@button_primary_bg_color, 5%);
+
+
+@button_primary_active:@button_bg_image @button_primary_active_bg_color;
+@button_primary_active_border: @primary_color;
+@button_primary_active_bg_color: darken(@button_primary_bg_color, 10%);
+
 
 
 /*  font sizes & typographic elements */

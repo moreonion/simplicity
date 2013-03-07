@@ -66,39 +66,39 @@ h6 {
  */
 
 input[type="submit"], #edit-submit, a.button, a.button:link, a.button:visited {
-  background: none @primary_color;
+  background:@button_primary;
   font-weight: bold;
   display: block;
   padding: .5em 1.5em .45em;
   color: @mywhite;
   text-decoration: none;
-  border: 1px solid #6B060B;
-  border-bottom: 3px solid #7A070D;
+  border: 1px solid @button_primary_border;
+  border-bottom: 3px solid darken(@button_primary_border, 3%);
   text-shadow: 1px 1px 1px #590E0F;
-  box-shadow: 0px 0px 5px inset #CC666B;
+  box-shadow: 0px 0px 5px inset darken(@primary_color, 10%);
   max-width: 350px;
   .rounded;
 }
 input[type="submit"]:hover, #edit-submit:hover, .button:hover, a.button:hover,
 input[type="submit"]:focus, #edit-submit:focus, .button:focus, a.button:focus {
-  background: repeat #BA1D22;
-  border-color: #6B060B;
+  background: @button_primary_hover;
+  border-color: @button_primary_hover_border;
   color: @mywhite;
   
 }
 input[type="submit"]:active, #edit-submit:active, .button:active, a.button:active {
   box-shadow:  -3px -3px 4px inset #000;
-  background-color: #7A070D;
+  background: @button_primary_active;
   -moz-box-shadow: -3px -3px 4px inset #000;
-  border-bottom: 1px solid #6B060B;
-  border-top: 1px solid #510407;
-  border-left: 1px solid #510407;
+  border-bottom: 1px solid darken(@button_primary_active_border, 3%);
+  border-top: 1px solid @button_primary_active_border;
+  border-left: 1px solid @button_primary_active_border;
   color: @mywhite;
 }
 
 input[type="text"], input[type="email"], input[type="password"], .form-text input, .form-type-password input, select, textarea {
   background: #f0f0f0;
-  border: 2px solid #cbcac6;
+  border: 1px solid #cbcac6;
   padding: .3em;
   text-shadow: 1px 1px 0px #FCFCFC;
   font-family: @sans;
@@ -186,6 +186,7 @@ form {
 }
 
 .marker, .form-required {
+  color: @error;
 }
 
 /*
