@@ -107,10 +107,11 @@
       <nav id="secondary-menu" role="navigation">
         <h2 class="element-invisible"><?php echo t('Secondary menu'); ?></h2>
         <?php echo render($secondary_menu); ?>
-
+         </nav> <!-- /#secondary-menu -->
+    <?php endif; ?>
       </div><!-- /.section -->
 
-    </header><!-- /#header -->
+    </header><!-- /#header -->  
   
   <?php if ($page['banner']): ?>
     <div id="banner">
@@ -136,8 +137,7 @@
   <div id="main-wrapper">    
     <div id="main" class="clearfix middle">
     
-      </nav> <!-- /#secondary-menu -->
-    <?php endif; ?>
+
 
       <div id="content" class="column" role="main">
         <div class="section">
