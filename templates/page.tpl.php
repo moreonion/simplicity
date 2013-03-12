@@ -150,7 +150,7 @@
         <div id="headerwrap"><h1 class="title" id="page-title"><?php print $title; ?></h1></div>
         <?php endif; ?>
         <?php print render($title_suffix); ?>
-        <?php if ($tabs && !ae_base_tabs_float()): ?>
+        <?php if ($tabs && !ae_base_tabs_float): ?>
           <div class="tabs"><?php print render($tabs); ?></div>
         <?php endif; ?>
         <?php print render($page['help']); ?>
