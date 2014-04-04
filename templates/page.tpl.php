@@ -79,9 +79,9 @@
         </div>
       </div>
     <?php endif; ?>
-    
+
     <header id="header" role="banner">
-      
+
       <div class="section middle clearfix">
 
       <?php if ($logo): ?>
@@ -96,23 +96,22 @@
       <?php if ($main_menu): ?>
         <nav id="main-menu" role="navigation">
           <h2 class="element-invisible"><?php echo t('Main menu'); ?></h2>
-          <?php $main_menu = menu_tree_all_data('main-menu'); ?>
-          <?php echo drupal_render(menu_tree_output($main_menu)); ?>
+          <?php $main_menu_output = menu_tree_output(menu_tree_all_data('main-menu')); ?>
+          <?php echo drupal_render($main_menu_output); ?>
         </nav><!-- /#navigation -->
       <?php endif; ?>
-      
-      
-      
-     <?php if ($secondary_menu): ?>
+
+    <?php if ($secondary_menu): ?>
       <nav id="secondary-menu" role="navigation">
         <h2 class="element-invisible"><?php echo t('Secondary menu'); ?></h2>
         <?php echo render($secondary_menu); ?>
-         </nav> <!-- /#secondary-menu -->
+      </nav> <!-- /#secondary-menu -->
     <?php endif; ?>
+
       </div><!-- /.section -->
 
-    </header><!-- /#header -->  
-  
+    </header><!-- /#header -->
+
   <?php if ($page['banner']): ?>
     <div id="banner">
       <div class="section middle clearfix">
@@ -120,7 +119,7 @@
       </div>
     </div>
   <?php endif; ?>
-    
+
   <?php if ($page['featured'] OR $is_front): ?>
     <div id="featured"><div class="section middle clearfix">
               <?php if ($title && $is_front): ?>
@@ -134,14 +133,13 @@
       <?php print $messages; ?>
     </div></div> <!-- /.section, /#messages -->
   <?php endif; ?>
-  <div id="main-wrapper">    
-    <div id="main" class="clearfix middle">
-    
+  <div id="main-wrapper">
 
+    <div id="main" class="clearfix middle">
 
       <div id="content" class="column" role="main">
         <div class="section">
-         
+
         <?php if ($breadcrumb): ?>
           <div id="breadcrumb"><?php print $breadcrumb; ?></div>
         <?php endif; ?>
@@ -150,7 +148,7 @@
         <div id="headerwrap"><h1 class="title" id="page-title"><?php print $title; ?></h1></div>
         <?php endif; ?>
         <?php print render($title_suffix); ?>
-        <?php if ($tabs): ?>
+        <?php if ($tabs && !morelesszen_tabs_float()): ?>
           <div class="tabs"><?php print render($tabs); ?></div>
         <?php endif; ?>
         <?php print render($page['help']); ?>
@@ -184,8 +182,8 @@
 
     </div><!-- /#main -->
   </div><!-- /#main-wrapper -->
-  
-  
+
+
   <?php if ($page['bottom']): ?>
   <div id="bottom">
     <div class="section middle">
@@ -197,14 +195,14 @@
     </div><!-- /.section -->
   </div><!-- /#footer -->
   <?php endif; ?>
-  
-    
+
+
   <?php if($page['footer']): ?>
-  
+
   <footer id="footer" role="contentinfo">
-    
+
     <div class="section middle">
-    
+
       <?php if($page['footer']): ?>
       <div id="footer-wrapper" class="clearfix">
         <div class="section">
@@ -212,16 +210,16 @@
         </div><!-- /.section -->
       </div><!-- /#footer-wrapper -->
       <?php endif; ?>
-      
+
     </div><!-- /.section -->
-    
+
   </footer><!-- /#footer -->
-  
+
   <?php endif; ?>
-  
+
   </div><!-- /#page -->
 </div><!-- /#page-wrapper -->
 
-<?php if($tabs && ae_base_tabs_float()): ?>
+<?php if($tabs && morelesszen_tabs_float()): ?>
   <div id="floating-tabs"><?php print render($tabs); ?></div>
 <?php endif; ?>

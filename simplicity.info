@@ -5,8 +5,7 @@ name = Simplicity
 description = A simple and clean Campaignion theme
 ;screenshot = screenshot.jpg
 core = 7.x
-base theme = ae_base
-
+base theme = morelesszen
 
 ; Regions --------------------------------------------------------------------
 ; these content regions are available for block placement
@@ -29,22 +28,34 @@ regions[sidebar_second] = Sidebar second
 regions[bottom] = Bottom
 regions[footer] = Footer
 
+regions[widget] = Widget
+
 ; main CSS files
 
-stylesheets[screen][] = css/boilerplate.less
-stylesheets[screen][] = css/layout.less
 stylesheets[screen][] = css/style.less
 stylesheets[screen][] = css/maintenance-page.less
-stylesheets[screen][] = css/css3.css
-
-
 
 ; JS files -------------------------------------------------------------------
 
-scripts[] = "js/narrow.js"
-scripts[] = "js/immediate_active_state.js"
+scripts[] = "js/simplicity.js"
 
+; JS files from base theme ---------------------------------------------------
+; uncomment and override if needed
+; override with empty file if you wanna "disable" the file
 
+;scripts[] = "js/matchmedia_polyfill.js"
+;scripts[] = "js/close_messages.js"
+;scripts[] = "js/equalheight.js"
+;scripts[] = "js/immediate_active_state.js"
+;scripts[] = "js/mobilemenu.js"
+;scripts[] = "js/country_dropdown.js"
+
+; module overrides -----------------------------------------------------------
+; uncomment the lines related to the .css-files you wish to override
+
+;stylesheets[screen][] = css/formstone/jquery.fs.picker.css
+;stylesheets[screen][] = css/formstone/jquery.fs.selecter.css
+;stylesheets[screen][] = css/formstone/jquery.fs.filer.css
 
 ; CSS overrides --------------------------------------------------------------
 ; uncomment the two lines related to one .css-file to override the core style
