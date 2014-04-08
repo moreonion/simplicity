@@ -21,8 +21,8 @@
 @gutter-half: 10px;
 
 /* This values set the width of the sidebars */
-@sidebar-first-width: 31.333%;
-@sidebar-second-width: 31.333%;
+@sidebar-first-width: 20%;
+@sidebar-second-width: 45%;
 
 
 /* ---------- breakpoints ------------------------------------------- */
@@ -49,6 +49,8 @@
 @fmain:   #303030; /* used for main font "grey", applies to all text through boilerplate */
 @mywhite: #fff; /* white is used frequently, so mywhite should change consistently */
 @myblack: #000;
+@fbright: lighten(@fmain, 20%);
+@fprimary_color: darken(@primary_color, 5%);
 
 /* main colors */
 @primary_color: #f27140; /* orange */
@@ -64,9 +66,22 @@
 @link_active_color: lighten(@primary_color, 5%);
 
 
+/* messages and moods */
+@error: #ef4340; /* this color tells you that you've done something wrong */
+@good: #a9ef40; /* this color indicates that everything is ok */
+
 /* backgrounds and background colors  */
 @background: #fff; /* bright theme */
 @background_color_light: @background;
+
+
+@background_grey_light: #f2f1ef;
+@background_grey_light_border: darken(@background_grey_light, 5%);
+
+@background_grey: #e9e8e6; /* bright theme */
+@background_grey_gradient: url('../img/gradient_grey.png') repeat-x bottom left #ecebe9; /* background gradient that works with @background_grey */
+@background_grey_border: darken(@background_grey, 5%);
+
 
 /* main menu links */
 @main_menu_link_color: #515151;

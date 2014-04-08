@@ -101,13 +101,6 @@
         </nav><!-- /#navigation -->
       <?php endif; ?>
 
-    <?php if ($secondary_menu): ?>
-      <nav id="secondary-menu" role="navigation">
-        <h2 class="element-invisible"><?php echo t('Secondary menu'); ?></h2>
-        <?php echo render($secondary_menu); ?>
-      </nav> <!-- /#secondary-menu -->
-    <?php endif; ?>
-
       </div><!-- /.section -->
 
     </header><!-- /#header -->
@@ -197,11 +190,18 @@
   <?php endif; ?>
 
 
-  <?php if($page['footer']): ?>
+  <?php if($page['footer'] || $secondary_menu): ?>
 
   <footer id="footer" role="contentinfo">
 
     <div class="section middle">
+    
+       <?php if ($secondary_menu): ?>
+      <nav id="secondary-menu" role="navigation">
+        <h2 class="element-invisible"><?php echo t('Secondary menu'); ?></h2>
+        <?php echo render($secondary_menu); ?>
+      </nav> <!-- /#secondary-menu -->
+    <?php endif; ?>
 
       <?php if($page['footer']): ?>
       <div id="footer-wrapper" class="clearfix">
