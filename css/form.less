@@ -145,7 +145,9 @@ legend {
 }
 
 .marker, .form-required {
+  color: @error;
 }
+
 
 /* ---------- validation -------------------------------------------- */
 
@@ -182,6 +184,90 @@ legend {
   }
 }
 
+
+/* ---------- webform steps ----------------------------------------------- */
+#webform-steps-wrapper {
+display: block;
+background-color: transparent;
+border-top: 1px solid darken(transparent,10%);
+border-bottom: 1px solid darken(transparent,10%);
+margin-bottom: @oneline;
+
+span.webform-step {
+  padding-left: 14px;
+  display: inline-block;
+  background: url('../img/arrow_head.png') no-repeat -2px -2px #E6E6E6;
+  border-top: 1px solid #D4D4D4;
+  border-bottom: 1px solid #D4D4D4;
+  color: #3C3030;
+  margin-top: -1px; // overlay borders of wrapper
+  margin-bottom: -1px;
+  
+  span {
+    display: block;
+    padding: .3em .6em .3em .6em;
+    background-color: #E6E6E6;
+  }
+  
+  input, .step-button {
+    .element-invisible;
+  }
+}
+
+span.current {
+  color: #3C3030;
+}
+
+span.first {
+  background: none;
+  padding-left: 0;
+  border-left: 1px solid #D4D4D4;
+  
+  span {
+    padding-left: 14px;
+    margin-left: -1px;
+  }
+}
+
+span.disabled {
+  padding-left: 14px;
+  display: inline-block;
+  background: url('../img/arrow_head.png') no-repeat -1px -42px transparent;
+  border-top: 1px solid #D4D4D4;
+  border-bottom: 1px solid #D4D4D4;
+  
+  span {
+    background-color: transparent;
+  }    
+}
+
+span.webform-step {
+  .step-button 
+}
+
+span.webform-step:hover, span.webform-step:focus {
+  cursor: pointer;
+}
+
+span.disabled:hover, span.current:hover, span.disabled:focus, span.current:focus {
+  cursor: default;
+}
+
+span.first-disabled {
+  background-position: -2px -3px;
+  
+  span {
+    background-color: transparent;
+  }
+}
+
+span.last {
+  padding-right: 14px;
+}
+span.current.last {
+  border-right: 1px solid #D4D4D4;
+}
+}
 
 /* ==================================================================
  * search form styles
