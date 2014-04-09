@@ -347,8 +347,12 @@ div.messages {
 /* ------#### main -------------------------------------------------- */
 
 #main {
-  padding-top: @oneline;
+  padding-top: @oneline*2;
   padding-bottom: @oneline*2;
+  
+  .region-content-top, .region-content {
+    margin-bottom: @oneline;
+  }
 }
 
 /* ---------- sidebar ----------------------------------------------- */
@@ -400,6 +404,85 @@ div.messages {
 /* ---------- field specific styles --------------------------------- */
 
 
+/* sahre light styling */
+
+
+.block-share-light {
+  max-width: 370px;
+  
+  ul.share-light {
+    padding: 0;
+    list-style: none;
+    list-style-position: outside;
+    
+    li {
+      list-style: none;
+      float: left;
+      width: 33%;
+      a {
+        // braucht für ie7 display inline-block und höhe/breite
+        display: inline-block;
+        width: 123px;
+        height: 94px;
+        padding-top: 70px;
+        text-decoration: none;
+        font-weight: bold;
+        text-align: center;
+      }
+      
+      a:hover, a:focus {
+        outline: 0;
+        margin-top: -3px;
+      }
+      
+      a:active {
+        margin-top: -1px;
+      }
+    }
+    
+    .facebook a {
+      background: url('../img/share_fb.png') no-repeat center top transparent;
+      
+    }
+    .twitter a {
+      background: url('../img/share_twitter.png') no-repeat center top transparent;
+
+    }
+    .forward a {
+      background: url('../img/share_email.png') no-repeat center top transparent;
+
+    }
+  }
+}
+
+/* recent supporters */
+
+.block-campaignion-recent-supporters {
+}
+
+ul.recent-supporters {
+  list-style: none;
+  margin:0;
+  
+ li {
+   list-style: none;
+   margin: 0;
+   padding: @oneline/4 0 @oneline/4 .5em;
+   border-bottom: 1px solid @background_grey_light;
+   background: url('../img/gradient_light.png') repeat-x transparent;
+   
+   .name {
+     display: block;
+     font-weight: 600;
+   }
+   
+   .time {
+     display: block;
+     color: lighten(@fbright,10%);
+     font-weight: 300;
+   }
+ }
+}
   
 /* pgbar styling - progress bar */
 
@@ -414,19 +497,21 @@ div.messages {
   box-shadow: inset 2px 2px 5px #CBCAC6;
   -moz-box-shadow: inset 2px 2px 5px #CBCAC6;
   height: 15px;
+  overflow: hidden;
 }
 
 .pgbar-wrapper {
-  padding: @oneline 3%;
+  padding: @oneline/2 3%;
   background: @background_grey_light;
+  color: @fbright;
   border: 1px solid @background_grey_border;
 }
 
 
 
 .pgbar-wrapper p {
-  margin-bottom: 0;
-  margin-top: 0;
+  margin-bottom: @oneline/4;
+  margin-top: @oneline/4;
 }
   
 .pgbar-current {
@@ -503,8 +588,10 @@ div.messages {
 
 
 .block-webform-block {
+  position: relative;
+
   .content {
-    padding: @oneline/2 4%;
+    padding: @oneline/2 4% @oneline/2;
     background: @background_grey_light;
     border-top: 1px solid #D4D4D4;
   }

@@ -11,7 +11,7 @@ form {
 }
 
 .form-item, .form-action {
-  margin-bottom: @oneline;
+  margin-bottom: @oneline/3;
 }
 
 fieldset {
@@ -25,8 +25,9 @@ input[type="submit"], #edit-submit, a.button, .button  {
   background: @primary_color repeat-x top;
   font-size: 120%;
   font-weight: bold;
+  text-align: center;
   display: block;
-  padding: .5em 1.5em .45em;
+  padding: 1em 3em .9em;
   color: @mywhite;
   text-decoration: none;
   border: 2px solid darken(@primary_color, 5%);
@@ -131,6 +132,8 @@ select {
 
 .description {
   .small;
+  margin-top: @oneline/4;
+  color: @fbright;
 }
 
 label, .picker .picker-label {
@@ -172,7 +175,7 @@ legend {
     margin-bottom: 3em;
 
     .form-submit {
-      //.button;
+      
 
       &:hover, &:focus {
         //.button_hover;
@@ -192,9 +195,8 @@ background-color: transparent;
 border-top: 1px solid darken(transparent,10%);
 border-bottom: 1px solid darken(transparent,10%);
 margin-bottom: @oneline;
-margin-top: -@oneline/2;
-margin-left: -4%;
 width: 100%;
+
 
 span.webform-step {
   padding-left: 14px;

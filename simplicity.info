@@ -190,5 +190,7 @@ scripts[] = "js/simplicity.js"
 ;stylesheets[screen][] = user-rtl.css
 ;stylesheets[screen][] = css/core/user-rtl.less
 stylesheets[screen][] = css/core/pgbar.css
+stylesheets[screen][] = css/core/recent-supporters.css
+
 
 
