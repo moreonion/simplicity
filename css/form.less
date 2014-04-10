@@ -154,6 +154,13 @@ legend {
 
 /* ---------- validation -------------------------------------------- */
 
+.form-item input.error,
+.form-item textarea.error,
+.form-item select.error,
+.form-item select.error + .selecter .selecter-selected,
+.form-item input.error + .picker .picker-handle {
+  border: 2px solid @error;
+}
 
 
 /* ==================================================================
