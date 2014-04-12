@@ -537,19 +537,6 @@ ul.recent-supporters {
   display: none;
 }
 
-
-.pgbar-numbers {
-  clear: both;
-  color: @fbright;
-  position: relative;
-}
-
-.pgbar-target {
-  position: absolute;
-  right: 0;
-}
-
-
 .pgbar-wrapper {
   max-width: 40em;
   margin-bottom: 1.5em;
@@ -568,6 +555,64 @@ ul.recent-supporters {
   position: absolute;
   left: 1em;
 }
+
+/* thermometer */
+
+/* these are raw styles for the thermometer progress bar */
+
+.pgbar-wrapper-thermometer {
+  position: relative;
+}
+
+.pgbar-wrapper-thermometer .pgbar-bg {
+  width: 74px;
+  height: 235px;;
+  position: relative;
+  background-image: url(../../img/pgbar_thermometer.png);
+  background-position: 147px 0%;
+  border: none;
+}
+
+.pgbar-wrapper-thermometer .pgbar-maxheight {
+  position: absolute;
+  width: 74px;
+  height: 170px;
+  overflow: auto;
+}
+
+.pgbar-wrapper-thermometer .pgbar-current {
+  position: absolute;
+  width: 74px;
+  height: 235px;
+  background-image: url(../../img/pgbar_thermometer.png);
+  background-position: 0% 0%;
+  background-color: transparent;
+}
+
+.pgbar-wrapper-thermometer .pgbar-overlay {
+  position: absolute;
+  width: 74px;
+  height: 235px;
+  background-image: url(../../img/pgbar_thermometer.png);
+  background-position: 100% 0%;
+}
+
+.pgbar-wrapper-thermometer .pgbar-percent {
+  display: none;
+  color: #575757;
+  position: absolute;
+  top: 230px;
+  width: 74px;
+  height: 20px;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 0;
+}
+
+.pgbar-wrapper-thermometer {
+}
+
 
 
 /* teaser progress bar styling */
