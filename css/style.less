@@ -132,7 +132,7 @@ a.close, a.close:hover {
 
 div.messages {
   position: relative;
-  margin: @oneline 0;
+  margin: @oneline/2 0;
   padding: @oneline/2 1.5em;
   padding-right: 3em;
   background-image: none;
@@ -344,10 +344,16 @@ div.messages {
   }
 }
 
+/* ------#### featured -------------------------------------------------- */
+
+#featured {
+  padding: @oneline*2 0;
+}
+
 /* ------#### main -------------------------------------------------- */
 
 #main {
-  padding-top: @oneline*2;
+  padding-top: @oneline*1.5;
   padding-bottom: @oneline*2;
   
   .region-content-top, .region-content {
@@ -457,7 +463,8 @@ div.messages {
 
 /* recent supporters */
 
-.block-campaignion-recent-supporters {
+.no-activity-yet {
+  color: @fbright;
 }
 
 ul.recent-supporters {
