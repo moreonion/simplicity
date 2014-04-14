@@ -31,13 +31,11 @@ Drupal.behaviors.simplicity.attach = function(context, settings) {
 (function($) {
 Drupal.behaviors.mobilemenu = {};
 Drupal.behaviors.mobilemenu.attach = function(context, settings) {
-  if ($('html').hasClass('lt-ie9')) {
-    return;
-  } else {
+  if ($.fn.mobilemenu) {
     $('#main-menu', context).mobilemenu({
       dimElement: '.campaignion-dialog-wrapper',
       shiftBodyAside: false,
-      adaptFullHeightOnResize: false,
+      adaptFullHeightOnResize: false
     });
   }
 };
