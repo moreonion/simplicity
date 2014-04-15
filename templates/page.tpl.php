@@ -113,11 +113,8 @@
     </div>
   <?php endif; ?>
 
-  <?php if ($page['featured'] OR $is_front): ?>
+  <?php if ($page['featured']): ?>
     <div id="featured"><div class="section middle clearfix">
-              <?php if ($title && $is_front): ?>
-              <div id="headerwrap"><h1 class="title" id="page-title"><?php print $title; ?></h1></div>
-              <?php endif; ?>
       <?php print render($page['featured']); ?>
     </div></div> <!-- /.section, /#featured -->
   <?php endif; ?>
@@ -137,7 +134,7 @@
           <div id="breadcrumb"><?php print $breadcrumb; ?></div>
         <?php endif; ?>
         <?php print render($title_prefix); ?>
-        <?php if ($title && !$is_front): ?>
+        <?php if ($title): ?>
         <div id="headerwrap"><h1 class="title" id="page-title"><?php print $title; ?></h1></div>
         <?php endif; ?>
         <?php print render($title_suffix); ?>
