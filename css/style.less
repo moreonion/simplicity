@@ -596,12 +596,20 @@ ul.recent-supporters {
    background: url('../img/gradient_light.png') repeat-x transparent;
    
    .name {
-     display: block;
      font-weight: 600;
    }
    
+   .title {
+     font-weight: 600;
+     a {
+       text-decoration: none;
+       &:hover {
+         text-decoration: underline;
+       }
+     }
+   }
+   
    .time {
-     display: block;
      color: lighten(@fbright,10%);
      font-weight: 300;
    }
