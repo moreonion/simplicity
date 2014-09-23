@@ -118,6 +118,9 @@ select {
 
 .webform-component-select {
   position: relative;
+  .ie7 & {
+    position: static;
+  }
 }
 
 .selecter {
@@ -175,7 +178,7 @@ legend {
 
   #edit-actions {
 
-    #edit-previous {
+    #edit-previous, input[id*="previous"] {
       .element-invisible;
     }
 
@@ -194,6 +197,11 @@ legend {
   }
 }
 
+// prevent throbber from changing the height of the webform
+.ajax-progress-throbber {
+  position: absolute;
+  bottom: @oneline/2;
+}
 
 /* ---------- webform steps ----------------------------------------------- */
 #webform-steps-wrapper {
@@ -333,5 +341,20 @@ span.current.last {
     left: 100%;
     border: none;
     .rounded(0);
+  }
+}
+
+/* ---------- workaround for IE7 weirdness -------------------------- */
+
+.ie7 {
+  #search-block-form, #search-form #edit-basic {
+    input[type="search"], input[type="text"] {
+      height: 1.2em;
+    }
+  }
+  #search-form #edit-basic {
+    #edit-submit, input[type="submit"] {
+      bottom: 1.4em;
+    }
   }
 }
