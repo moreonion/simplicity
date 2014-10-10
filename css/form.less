@@ -289,6 +289,129 @@ span.current.last {
 }
 }
 
+/* ---------- donation amount --------------------------------------------- */
+
+div.webform-component-radios[id*="donation-amount"],
+div.webform-component-select[id*="donation-amount"] {
+  max-width: 26em;
+
+  /* donation amount "buttons" */
+  .form-type-radio {
+    display: inline-block;
+    float: left;
+    width: 28%;
+    margin-right: 5%;
+    min-width: 3em;
+    margin-bottom: 0.5em;
+  }
+  .picker,
+  .picker .picker-label {
+    margin: 0;
+  }
+  .picker-radio .picker-handle,
+  input[type="radio"] {
+    position: absolute;
+    left: -99999px;
+  }
+  label.option {
+    .f(24);
+    color: lighten(@fmain, 25%);
+    background-color: @background_color_light;
+    border: 1px solid @background_grey_light_border;
+    .rounded(8px);
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.375em;
+    padding: @oneline/2 0;
+    text-align: center;
+    visibility: visible;
+  }
+  label.option:hover, label.option:focus {
+    background-color: lighten(@primary_color, 5%);
+    border-color: @primary_color;
+    .textshadow(darken(@primary_color, 10%));
+    color: @mywhite;
+  }
+  .checked label.option,
+  input[type="radio"]:checked + label.option {
+    background-color: darken(@primary_color, 5%);
+    border: 1px solid darken(@primary_color, 10%);
+    box-shadow: 2px 2px 4px darken(@primary_color, 15%) inset;
+    .textshadow(darken(@primary_color, 10%));
+    color: @mywhite;
+  }
+
+  /* other amount label */
+  .other-amount {
+    float: none;
+    clear: both;
+    display: block;
+    width: auto;
+    margin: 0 auto;
+    padding: 0;
+
+    .checked label, .checked label:hover,
+    label, label:hover {
+      cursor: default;
+      background: transparent;
+      border: none;
+      color: lighten(@fmain, 20%);
+      font-size: 100%;
+      .rounded(0);
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+      text-shadow: none;
+      margin: 0;
+      padding: 0;
+      width: auto;
+      text-align: left;
+    }
+  }
+
+  /* other amount textfield */
+  .select-or-other .form-type-textfield {
+    clear: both;
+    position: relative;
+    width: 28%;
+    min-width: 7em;
+    margin-top: 0;
+
+    input {
+      padding: @oneline/2 0.5em;
+      padding-left: 1.25em;
+      .f(24);
+      display: block;
+      .rounded(8px);
+      margin: 0 auto;
+      text-align: center;
+      color: lighten(@fmain, 50%);
+      font-weight: bold;
+      &:hover, &:active, &:focus,
+      &.select-or-other-checked {
+        color: lighten(@fmain, 20%);
+        font-weight: bold;
+        border: 1px solid @primary_color;
+        box-shadow: 0 0 1px @primary_color inset;
+      }
+    }
+
+    label { /* currency symbol */
+      visibility: visible;
+      display: block;
+      position: absolute;
+      height: auto;
+      padding: @oneline/2 0.5em;
+      width: auto;
+      left: 0;
+      .f(24);
+      margin: 0;
+      border: 1px solid transparent;
+    }
+  }
+}
+
+
 /* ==================================================================
  * search form styles
  * ================================================================== */

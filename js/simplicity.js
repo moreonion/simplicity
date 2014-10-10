@@ -22,8 +22,6 @@ Drupal.behaviors.simplicity.attach = function(context, settings) {
       }
     });
   }
-
-
 };
 
 Drupal.behaviors.clickableTeasers = {};
@@ -43,4 +41,37 @@ Drupal.behaviors.mobilemenu.attach = function(context, settings) {
     });
   }
 };
+
+
+Drupal.behaviors.selectOrOther = {};
+Drupal.behaviors.selectOrOther.attach = function(context, settings) {
+  // always show 'other' textfield for donation amount if select-or-other is enabled
+  var $donationComponent = $('#webform-component-donation-amount, #webform-component-amount--donation-amount', context);
+  var $donationSelect = $('.select-or-other-select', $donationComponent);
+  var $donationOtherRadio = $('[value="select_or_other"]', $donationSelect);
+  var $donationRegularRadios = $('input[type=radio]', $donationSelect).not($donationOtherRadio);
+  var $donationOther = $('.select-or-other-other', $donationComponent);
+  // hide by js so it will show up, when js is disabled
+  // therefor no functionality would be hidden
+  $donationOtherRadio.closest('.form-item').addClass('other-amount');
+
+  if ($donationOther.length > 0) {
+    // IE 7 needs bind on document for change
+    $(document).on('click', '#webform-component-donation-amount .select-or-other-other, #webform-component-amount--donation-amount .select-or-other-other', function (e) {
+      var value = e.target.value;
+      // validation should be done in another place
+      // trigger change to get picker to update the state
+      $donationOtherRadio.prop('checked', true).trigger('change');
+      $donationOther.addClass('select-or-other-checked');
+    });
+    $donationRegularRadios.on('click', function (e) {
+      $donationOther.removeClass('select-or-other-checked');
+    });
+    // also add class if the other option has already been selected (e.g. when returning to webform page)
+    if ($donationOtherRadio.prop('checked')) {
+      $donationOther.addClass('select-or-other-checked');
+    }
+  }
+};
+
 })(jQuery);
