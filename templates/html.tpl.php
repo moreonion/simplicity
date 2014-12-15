@@ -44,7 +44,7 @@ $html_attributes = "lang=\"{$language->language}\" dir=\"{$language->dir}\" {$rd
   <?php print $head; ?>
   
   <!-- loads google font open sans -->
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
 
   <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame  -->
   <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
