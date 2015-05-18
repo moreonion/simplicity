@@ -1,0 +1,86 @@
+// Variables
+
+@page_base_bgcolor: #e5e4e3;
+@page_border_width: 1px;
+@page_fontsize: 0.85em;
+@page_height: 2.5em;
+
+// Mixins
+
+.set_page_color(@background, @border: darken(@background, 20%)){
+  background-color: @background;
+  border-color: @border;
+
+  &:after {
+    border-left-color: @background;
+  }
+  &:before {
+    border-left-color: @border;
+  }
+}
+
+/* Basic Styles */
+
+.webform-progressbar {
+  overflow: hidden;
+  padding-right: @page_height/3;
+  font-size: @page_fontsize;
+}
+
+.webform-progressbar-page {
+  position: relative;
+  box-sizing: border-box;
+  display:block;
+  float: left;
+
+  background-color: @page_base_bgcolor;
+  border: @page_border_width solid darken(@page_base_bgcolor, 10%);
+  padding-right: @page_height/4;
+  padding-left: @page_height/4 + @page_height/3;
+  height: @page_height;
+  line-height: @page_height*0.99;
+
+  &:before, &:after {
+    content: " ";
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: @page_height/2 solid transparent;
+    border-bottom: @page_height/2 solid transparent;
+    border-left: @page_height/3 solid @page_base_bgcolor;
+    position: absolute;
+    top: 50%;
+    margin-top: -@page_height/2;
+    left: 100%;
+  }
+  &:before {
+    z-index: 1;
+    border-left-color: darken(@page_base_bgcolor, 10%);
+    margin-left: @page_border_width;
+  }
+  &:after {
+    z-index: 2;
+  }
+}
+
+/* Specific Styles (active vs. inactive pages) */
+
+.webform-progressbar-page,
+.webform-progressbar-page.previous {
+  cursor: pointer;
+  .set_page_color(@page_base_bgcolor);
+
+  &:hover, &:focus {
+    .set_page_color(darken(@page_base_bgcolor, 10%));
+  }
+}
+
+.webform-progressbar-page.current {
+  cursor: default;
+  .set_page_color(lighten(@page_base_bgcolor, 10%));
+}
+
+.webform-progressbar-page.disabled {
+  cursor: default;
+  .set_page_color(darken(@page_base_bgcolor, 10%));
+}
