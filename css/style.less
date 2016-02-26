@@ -81,17 +81,17 @@ h2 {
   .f(20);
   font-weight: normal;
   font-family: @sansb;
-  color: darken(@heading_second_color, 5%);
+  color: @heading_second_color;
 }
 
 h2 a, h2 a:link, h2 a:visited {
   text-decoration: none;
-  color: darken(@heading_second_color, 5%);
+  color: @heading_second_color;
 }
 
 h2 a:hover, h2 a:focus {
   text-decoration: underline;
-  color: darken(@heading_second_color, 3%);
+  color: @heading_second_color;
 }
 
 h3 {
@@ -103,7 +103,7 @@ h3 {
 h4 {
   .f(15);
   font-weight: bold;
-  color: darken(@secondary_color, 5%);
+  color: @heading_second_color;
 }
 
 h5 {
@@ -133,6 +133,11 @@ a:hover, a:focus {
 
 a:active {
   outline: none;
+}
+
+a.button {
+  color: @mywhite;
+  text-decoration: none;
 }
 
 /* ---------- messages ---------------------------------------------- */
@@ -799,6 +804,14 @@ ul.recent-supporters {
 }
 
 
+/* letter styling (optional class) */
+
+.letter {
+  border: 1px solid lighten(@background_grey_border, 5%);
+  .boxshadow(0, 2px, 3px, @background_grey_border);
+}
+
+
 /* ---------- block specific styles --------------------------------- */
 
 
@@ -820,6 +833,24 @@ ul.recent-supporters {
 
 
 /* ------#### footer ------------------------------------------------ */
+
+#footer .menu {
+  li {
+    display: inline;
+    white-space: nowrap;
+
+    a {
+      color: @footer_menu_link_color;
+      padding: 0.5em;
+    }
+    a:hover, a:focus {
+      color: @footer_menu_link_hover_color;
+    }
+    a:active {
+      color: @footer_menu_link_active_color;
+    }
+  }
+}
 
 
 /* ==================================================================

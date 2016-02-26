@@ -58,12 +58,12 @@
 
 /* heading colors */
 @heading_color: @myblack;
-@heading_second_color: @primary_color;
+@heading_second_color: @fprimary_color;
 
 /* link colors */
-@link_color: @primary_color;
-@link_hover_color: darken(@primary_color, 10%);
-@link_active_color: lighten(@primary_color, 5%);
+@link_color: @fprimary_color;
+@link_hover_color: darken(@link_color, 5%);
+@link_active_color: lighten(@link_color, 5%);
 
 
 /* messages and moods */
@@ -95,6 +95,11 @@
 @main_menu_item_border_color: transparent;
 @main_menu_item_hover_border_color: darken(@main_menu_item_bg_color, 4%);
 @main_menu_item_active_border_color: darken(@main_menu_item_bg_color,5%);
+
+/* footer menu links */
+@footer_menu_link_color: lighten(@main_menu_link_color, 15%);
+@footer_menu_link_hover_color: darken(@footer_menu_link_color, 15%);
+@footer_menu_link_active_color: darken(@footer_menu_link_color, 5%);
 
 /* mobile menu */
 @mobile_menu_width: 270px;
