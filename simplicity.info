@@ -191,5 +191,5 @@ scripts[] = "js/simplicity.js"
 ;stylesheets[screen][] = css/core/user-rtl.less
 stylesheets[screen][] = css/core/pgbar.css
 stylesheets[screen][] = css/core/pgbar-thermometer.css
-stylesheets[screen][] = css/core/recent-supporters.css
+;stylesheets[screen][] = css/core/recent-supporters.css
 stylesheets[screen][] = css/webform_steps_w3.css
