@@ -30,22 +30,22 @@ input[type="submit"], #edit-submit, a.button, .button  {
   padding: 1em 3em .9em;
   color: @mywhite;
   text-decoration: none;
-  border: 2px solid darken(@primary_color, 5%);
-  .textshadow(darken(@primary_color, 10%));
+  border: 2px solid darken(@button_color, 5%);
+  .textshadow(darken(@button_color, 10%));
   .rounded(4px);
 }
 
 input[type="submit"]:hover, #edit-submit:hover, .button:hover, a.button:hover,
-input[type="submit"]:focus, #edit-submit:focus, .button:focus, a.button:focus,
+input[type="submit"]:focus, #edit-submit:focus, .button:focus, a.button:focus, .button_focus,
 .ui-body-o a.button:hover, .ui-body-o a.button:focus {
-  background: repeat lighten(@primary_color, 5%);
-  border-color: @primary_color;
+  background: repeat lighten(@button_color, 5%);
+  border-color: @button_color;
   color: @mywhite;
 }
 
-input[type="submit"]:active, #edit-submit:active, .button:active, a.button:active {
-  background: repeat darken(@primary_color, 5%);
-  border-color: darken(@primary_color, 10%);
+input[type="submit"]:active, #edit-submit:active, .button:active, a.button:active, .button_active {
+  background: repeat darken(@button_color, 5%);
+  border-color: darken(@button_color, 10%);
   color: @mywhite;
 }
 

@@ -559,8 +559,7 @@ div.messages {
 /* ---------- field specific styles --------------------------------- */
 
 
-/* sahre light styling */
-
+/* share light styling */
 
 .block-share-light {
   max-width: 370px;
@@ -568,44 +567,45 @@ div.messages {
   ul.share-light {
     padding: 0;
     list-style: none;
-    list-style-position: outside;
-    
-    li {
-      list-style: none;
-      float: left;
-      width: 33%;
-      a {
-        // braucht für ie7 display inline-block und höhe/breite
-        display: inline-block;
-        width: 123px;
-        height: 94px;
-        padding-top: 70px;
-        text-decoration: none;
-        font-weight: bold;
-        text-align: center;
-      }
-      
-      a:hover, a:focus {
-        outline: 0;
-        margin-top: -3px;
-      }
-      
-      a:active {
-        margin-top: -1px;
-      }
-    }
-    
-    .facebook a {
-      background: url('../img/share_fb.png') no-repeat center top transparent;
-      
-    }
-    .twitter a {
-      background: url('../img/share_twitter.png') no-repeat center top transparent;
 
-    }
-    .forward a, .email a {
-      background: url('../img/share_email.png') no-repeat center top transparent;
+    li a {
+      .button();
+      text-align: left;
+      padding-left: 5em;
+      position: relative;
 
+      &:hover, &:focus {
+        .button_focus();
+      }
+      &:active {
+        .button_active();
+      }
+    }
+
+    a span:before {
+      content: '';
+      background: url('../img/share_icons.png') no-repeat center transparent;
+      position: absolute;
+      top: 0;
+      left: 2em;
+      width: 50px;
+      height: 100%;
+    }
+    .facebook a span:before {
+      background-position: 0 center;
+    }
+    .twitter a span:before {
+      background-position: -50px center;
+    }
+    .forward a span:before,
+    .email a span:before {
+      background-position: -100px center;
+    }
+    .whatsapp a span:before {
+      background-position: -150px center;
+    }
+    .instagram a span:before {
+      background-position: -200px center;
     }
   }
 }
@@ -1001,16 +1001,6 @@ ul.menu {
 
 .locale-untranslated { /* hide all untranslated links */
   display: none;
-}
-
-/* ---------- share light ------------------------------------------- */
-
-.block-share-light {
-  ul.share-light {
-    li {
-
-    }
-  }
 }
 
 /* ---------- webform widget ---------------------------------------- */
