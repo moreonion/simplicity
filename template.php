@@ -29,10 +29,11 @@ function simplicity_preprocess_field(&$vars) {
  */
 function simplicity_less_paths_alter(&$less_paths, $system_name){
   $themes = $GLOBALS['theme_info']->base_themes;
+  $current_theme = $GLOBALS['theme'];
   foreach (array_keys($themes) as $theme){
     $themes[$theme] = DRUPAL_ROOT . '/' . drupal_get_path('theme', $theme);
   }
-  $themes[$GLOBALS['theme']] =  DRUPAL_ROOT . '/' . $GLOBALS['theme_path'];
+  $themes[$current_theme] =  DRUPAL_ROOT . '/' . drupal_get_path('theme', $current_theme);
 
   if (isset($themes[$system_name])) {
     $less_paths += array_reverse(array_values($themes));
