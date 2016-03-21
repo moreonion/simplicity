@@ -9,7 +9,6 @@ base theme = morelesszen
 
 ; Regions --------------------------------------------------------------------
 ; these content regions are available for block placement
-; some are special hidden regions: page_top, page_bottom, and help
 
 ; these are the stock regions
 regions[top_bar] = Top bar
@@ -30,7 +29,7 @@ regions[footer] = Footer
 
 regions[widget] = Widget
 
-; main CSS files
+; main CSS files -------------------------------------------------------------
 
 stylesheets[screen][] = css/maintenance-page.css
 stylesheets[screen][] = css/style.less
@@ -43,21 +42,31 @@ scripts[] = "js/simplicity.js"
 ; uncomment and override if needed
 ; override with empty file if you wanna "disable" the file
 
+;scripts[] = "js/jquery.fs.selecter.js"
+;scripts[] = "js/jquery.fs.picker.js"
+;scripts[] = "js/jquery.fs.filer.js"
+;scripts[] = "js/formstone.js"
+
 ;scripts[] = "js/matchmedia_polyfill.js"
+;scripts[] = "js/matchmedia.addListener.js"
 ;scripts[] = "js/close_messages.js"
 ;scripts[] = "js/equalheight.js"
 ;scripts[] = "js/immediate_active_state.js"
-;scripts[] = "js/mobilemenu.js"
-;scripts[] = "js/country_dropdown.js"
+;scripts[] = "js/jquery.mobilemenu.js"
+;scripts[] = "js/jquery.webform-ajax-slide.js"
 
-; module overrides -----------------------------------------------------------
+; CSS files from base theme --------------------------------------------------
 ; uncomment the lines related to the .css-files you wish to override
 
-;stylesheets[screen][] = css/formstone/jquery.fs.picker.css
-;stylesheets[screen][] = css/formstone/jquery.fs.selecter.css
-;stylesheets[screen][] = css/formstone/jquery.fs.filer.css
+;stylesheets[screen][] = "css/jquery.fs.selecter.css"
+;stylesheets[screen][] = "css/jquery.fs.picker.css"
+;stylesheets[screen][] = "css/jquery.fs.filer.css"
+;stylesheets[screen][] = "css/quotes.css"
+;stylesheets[screen][] = "css/jquery.webform-ajax-slide.less"
 
-; CSS overrides --------------------------------------------------------------
+;stylesheets[screen][] = "css/style.less"
+
+; module CSS overrides -------------------------------------------------------
 ; uncomment the two lines related to one .css-file to override the core style
 ; and activate our less file.
 
@@ -191,5 +200,5 @@ scripts[] = "js/simplicity.js"
 ;stylesheets[screen][] = css/core/user-rtl.less
 stylesheets[screen][] = css/core/pgbar.css
 stylesheets[screen][] = css/core/pgbar-thermometer.css
-stylesheets[screen][] = css/core/recent-supporters.css
+;stylesheets[screen][] = css/core/recent-supporters.css
 stylesheets[screen][] = css/webform_steps_w3.css
