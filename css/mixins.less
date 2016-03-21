@@ -5,8 +5,44 @@
  */
 
 /* ==================================================================
+ * theme specific mixins
+ * ================================================================== */
+
+.logo_container(@bgcolor: transparent) when (@logo_has_border) {
+  background-color: @bgcolor;
+  border-right: 1px solid @header_border_color;
+  border-left: 1px solid @header_border_color;
+}
+
+/* ==================================================================
  * classes and @ for random reuse
  * ================================================================== */
+
+/* ---------- font sizes -------------------------------------------- */
+
+// see https://github.com/tyssen/Less-Baseline-Grid-Generator
+
+// function to calculate font-size, line-height and margin-bottom
+// according to the baseline grid
+// expects
+.f(@fontsize: @basefontsize, @lineheight: @baselineheight) {
+  // multiplier determines the closest multiplier needed to
+  // get the next multiple of @baselineheight
+  @multiplier: ceil(1/(@lineheight/@fontsize));
+  // font-size: the argument (px) expressed in em, related to @basefontsize
+  font-size: (@fontsize/@basefontsize)*1em;
+  // line-height: the closest multiple of @baselineheight, expressed in em
+  line-height: ((@baselineheight*@multiplier)/@fontsize)*1em;
+  // margin-bottom: always the @baselineheight expressed in em
+  margin-bottom: (@baselineheight/@fontsize)*1em;
+}
+
+.small {
+  font-size: 100% * @smallsize;
+  line-height: @oneline * @smallsize;
+}
+
+/* ---------- cross browser stuff ----------------------------------- */
 
 .element-invisible {
   position: absolute !important;

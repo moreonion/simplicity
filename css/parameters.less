@@ -83,10 +83,13 @@
 @background_grey_border: darken(@background_grey, 5%);
 
 @header_background: @background_grey_light;
+@header_border_color: @background_grey_border;
+@logo_has_border: true;
 
-/* progress bar colors */
+/* progress bar */
 @progressbar_color: @primary_color;
 @thermometer_color: @progressbar_color;
+@progressbar_height: 15px;
 
 /* main menu links */
 @main_menu_link_color: #515151;
@@ -110,7 +113,7 @@
 
 
 /* ==================================================================
- * font sizes & typographic elements 
+ * fonts & typographic elements 
  * ================================================================== */
 
 /* ---------- baseline grid ----------------------------------------- */
@@ -121,35 +124,15 @@
 // default 1.5em = 24px on 100% font size (16px)
 @oneline: (@baselineheight/@basefontsize)*1em;
 
+/* ---------- fonts ---- -------------------------------------------- */
+
 @serif: Georgia, Times, "Times New Roman", serif ;
 @sans: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans;
 @sansb: @sans;
-@sansbb: @sans;
 
 @mainfont: @sans;
 @codefont: @sans;
+@headingfont: @sansb;
 
-.small () {
-  font-size: 75%;
-  line-height: @oneline * .75;
-}
-
-/* ---------- font sizes -------------------------------------------- */
-
-// see https://github.com/tyssen/Less-Baseline-Grid-Generator
-
-// function to calculate font-size, line-height and margin-bottom
-// according to the baseline grid
-// expects
-.f(@fontsize: @basefontsize, @lineheight: @baselineheight) {
-  // multiplier determines the closest multiplier needed to
-  // get the next multiple of @baselineheight
-  @multiplier: ceil(1/(@lineheight/@fontsize));
-  // font-size: the argument (px) expressed in em, related to @basefontsize
-  font-size: (@fontsize/@basefontsize)*1em;
-  // line-height: the closest multiple of @baselineheight, expressed in em
-  line-height: ((@baselineheight*@multiplier)/@fontsize)*1em;
-  // margin-bottom: always the @baselineheight expressed in em
-  margin-bottom: (@baselineheight/@fontsize)*1em;
-}
+@smallsize: .75;
 
