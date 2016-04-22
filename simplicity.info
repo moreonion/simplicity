@@ -32,7 +32,11 @@ regions[widget] = Widget
 ; main CSS files -------------------------------------------------------------
 
 stylesheets[screen][] = css/maintenance-page.css
-stylesheets[screen][] = css/style.less
+; By default we use a pre-compiled style.css.
+stylesheets[screen][] = css/style.css
+; If less is installed and configured to use less.js we an alter-hook to
+; replace it with style.less .
+;stylesheets[screen][] = css/style.less
 
 ; JS files -------------------------------------------------------------------
 
