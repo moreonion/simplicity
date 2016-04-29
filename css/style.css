@@ -4044,6 +4044,8 @@ ul.recent-supporters li .comment {
 }
 /* letter styling (optional class) */
 .letter {
+  padding: 1.5em 5% 0;
+  margin-bottom: 1.5em;
   border: 1px solid #e9e8e6;
   -webkit-box-shadow: 0 2px 3px #dddcd8;
   -moz-box-shadow: 0 2px 3px #dddcd8;
