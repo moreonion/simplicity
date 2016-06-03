@@ -837,6 +837,28 @@ ul.recent-supporters {
 
 /* ---------- node and context specific styles ---------------------- */
 
+// share pages
+form.share-page {
+  textarea#edit-message-value {
+    min-height: 18em;
+  }
+  .filter-wrapper {
+    padding: 0;
+    .filter-help {
+       display: none;
+    }
+    .filter-guidelines {
+      padding: 0;
+      li {
+        margin-bottom: 0;
+      }
+      .tips { // like description
+        font-size: 0.85em;
+        color: #636363;
+      }
+    }
+  }
+}
 
 /* ------#### footer ------------------------------------------------ */
 
@@ -1006,6 +1028,8 @@ ul.menu {
 .locale-untranslated { /* hide all untranslated links */
   display: none;
 }
+
+
 
 /* ---------- webform widget ---------------------------------------- */
 
