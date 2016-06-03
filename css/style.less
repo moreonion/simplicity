@@ -25,9 +25,15 @@
 
 /* ---------- generic stuff ----------------------------------------- */
 
+html {
+  font-size: @basefontsize*1px;
+}
+
 body {
   font-family: @sans;
   font-weight: normal;
+  font-size: 1em;
+  line-height: @baselineheight/@basefontsize;
   background: @background;
   // overflow: auto; // ???
 }
