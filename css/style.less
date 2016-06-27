@@ -511,18 +511,16 @@ div.messages {
   }
   
   .node-readmore a {
-    .button;
+    .button
     display: inline-block;
     padding: @oneline/2 1.5em;
     float: right;
-    
+
     &:hover, &:focus {
-      background: repeat lighten(@primary_color, 5%);
-      border-color: @primary_color;
+      .button_focus();
     }
     &:active {
-      background: repeat darken(@primary_color, 5%);
-      border-color: darken(@primary_color, 10%);
+      .button_active();
     }
   }
 }
