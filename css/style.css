@@ -41,6 +41,7 @@
 /* main menu links */
 /* footer menu links */
 /* mobile menu */
+/* language switcher */
 /* ==================================================================
  * fonts & typographic elements 
  * ================================================================== */
@@ -76,9 +77,7 @@
 /* ---------- vertical tabs stuff ----------------------------------- */
 /* ---------- floating tabs ----------------------------------------- */
 /* ---------- mo-dialogs -------------------------------------------- */
-/**
- * Parameter
- */
+/* ########## boilerplate.less ###################################### */
 /**
  * Reset CSS
  */
@@ -207,7 +206,7 @@ button,
 input,
 select,
 textarea {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans;
+  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans;
   color: #303030;
 }
 /* =============================================================================
@@ -257,8 +256,8 @@ pre,
 code,
 kbd,
 samp {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans;
-  _font-family: "Helvetica Neue", Helvetica, Arial, sans;
+  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans;
+  _font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans;
   font-size: 100%;
 }
 /* Improve readability of pre-formatted text in all browsers */
@@ -283,6 +282,7 @@ small {
 sub,
 sup {
   font-size: 75%;
+  line-height: 1.125em;
   line-height: 0;
   position: relative;
   vertical-align: baseline;
@@ -2466,8 +2466,8 @@ td {
   width: 100%;
   margin-right: -100%;
 }
-/* ----------  sevenlayout macro ------------------------------------ */
-@media screen and (min-width: 768px) {
+/* ---------- desktop layout --------------------------------------- */
+@media screen and (min-width: 780px) {
   #content,
   #navigation,
   #sidebar-first,
@@ -2479,34 +2479,38 @@ td {
     margin-right: -100%;
   }
   .sidebar-first #content .section {
-    padding-left: 33.33%;
+    padding-left: 22%;
     /* LC width */
   }
   .sidebar-first #introbox {
-    padding-left: 33.33%;
+    padding-left: 22%;
     /* LC width */
   }
   .sidebar-second #content .section {
-    padding-right: 35.33%;
+    padding-right: 49%;
     /* RC width */
   }
   .two-sidebars #content .section {
-    padding-left: 33.33%;
+    padding-left: 22%;
     /* LC width */
-    padding-right: 33.33%;
+    padding-right: 47%;
     /* RC width */
   }
   #sidebar-first {
-    width: 31.33%;
+    width: 20%;
     /* LC width */
-    margin-right: -31.33%;
+    margin-right: -20%;
   }
   #sidebar-second {
     float: right;
-    width: 31.33%;
+    width: 45%;
     /* RC width */
-    margin-left: -31.33%;
+    margin-left: -45%;
     /* RC width */
+  }
+  /* equal height columns */
+  #main {
+    overflow: hidden;
   }
 }
 /* ==================================================================
@@ -2514,9 +2518,9 @@ td {
  * ================================================================== */
 /* ---------- middle macro ------------------------------------------ */
 .middle {
-  width: 80%;
+  width: 94%;
   padding: 0 3%;
-  max-width: 85em;
+  max-width: 1200px;
   clear: both;
   overflow-x: hidden;
   overflow-y: visible;
@@ -2524,71 +2528,44 @@ td {
   position: relative;
   display: block;
 }
-/* ---------- other basic classes ----------------------------------- */
-/* ==================================================================
- * grid and column layouts
- * ================================================================== */
-.full12 {
-  margin: 0 1% 0;
+@media screen and (min-width: 780px) {
+  .middle {
+    width: 85%;
+  }
 }
-.col {
-  margin: 0 2% 1.5em 0;
-  list-style: none;
-  float: left;
-  position: relative;
-  display: block;
+/* ---------- Menu mobile / default --------------------------------- */
+#main-menu {
+  float: none;
+  clear: both;
   width: 100%;
 }
-.twocol,
-.threecol,
-.fourcol,
-.sixcol,
-.full12 {
+#main-menu li {
+  float: none;
   clear: both;
+  width: 100%;
 }
-/* ---------- fivegrid macro ---------------------------------------- */
-/* ---------- sevengrid macro --------------------------------------- */
-/* ==================================================================
- * bind macros to media queries / classes
- * ================================================================== */
-@media screen and (min-widht: 500px) {
-  .twocol .col {
-    width: 48%;
-  }
-  .threecol .col,
-  .fourcol .col,
-  .fivecol .col {
-    width: 48%;
-  }
-  .col.last {
+#mobile-menu-icon {
+  display: block;
+  width: 36px;
+  height: 36px;
+  float: right;
+  clear: right;
+  text-indent: 9999px;
+  overflow: hidden;
+}
+@media screen and (min-width: 780px) {
+  #main-menu {
     float: right;
-    margin-right: 0;
-  }
-}
-@media screen and (min-width: 700px) {
-  body .twocol .col {
-    width: 49%;
-  }
-  body .threecol .col {
-    width: 36.33%;
-  }
-  body .fourcol .col {
-    width: 28%;
-  }
-  body .sixcol .col {
-    width: 14.66%;
-  }
-}
-@media screen and (win-width: 500px) {
-  #featured .twocol .col {
-    width: 100%;
-    clear: both;
-  }
-}
-@media screen and (win-width: 768px) {
-  #featured .twocol .col {
-    width: 48%;
     clear: none;
+    width: auto;
+  }
+  #main-menu li {
+    float: left;
+    clear: none;
+    width: auto;
+  }
+  #mobile-menu-icon {
+    display: none;
   }
 }
 /* Basic Styles */
@@ -2763,7 +2740,7 @@ select,
   font-size: 120%;
   background-color: #fff;
   border: 1px solid #cccccc;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans;
+  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans;
   font-weight: normal;
   color: #303030;
   padding: .5em;
@@ -3328,9 +3305,14 @@ ul.action-links li a {
  * ================================================================== */
 /* Only style generic html tags here. */
 /* ---------- generic stuff ----------------------------------------- */
+html {
+  font-size: 16px;
+}
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans;
+  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans;
   font-weight: normal;
+  font-size: 1em;
+  line-height: 1.5;
   background: #fff;
 }
 p,
@@ -3385,14 +3367,14 @@ h1 {
   clear: left;
   display: block;
   word-wrap: break-word;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans;
+  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans;
 }
 h2 {
   font-size: 1.25em;
   line-height: 1.2em;
   margin-bottom: 1.2em;
   font-weight: normal;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans;
+  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans;
   color: #f05f28;
 }
 h2 a,
@@ -3555,7 +3537,7 @@ div.messages li:last-child {
 #main-menu a,
 #main-menu a:visited {
   font-weight: normal;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans;
+  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans;
   color: #808080;
   text-decoration: none;
   display: block;
@@ -3588,7 +3570,7 @@ div.messages li:last-child {
   border: 1px solid transparent;
   border-bottom: 1px solid #d9d9d9;
   text-transform: none;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans;
+  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans;
   color: #303030;
 }
 #main-menu .menu .menu a:hover,
@@ -3613,7 +3595,7 @@ div.messages li:last-child {
   height: 40px;
   background: url('images/mobile-menu-icon.png') no-repeat 2px center transparent;
   text-decoration: none;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans;
+  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans;
   color: #565456;
   font-weight: normal;
   font-style: normal;
@@ -3715,7 +3697,77 @@ div.messages li:last-child {
   -moz-transform: translateX(300px);
   transform: translateX(300px);
 }
-/* ------#### featured -------------------------------------------------- */
+/* ------ language switcher ----------------------------------------- */
+.block-campaignion-language-switcher {
+  float: right;
+  margin-top: 0.75em;
+  margin-left: .5em;
+  font-size: 0.92em;
+}
+.with-mobile-menu.gone-mobile .block-campaignion-language-switcher {
+  margin-right: 3em;
+}
+.block-campaignion-language-switcher .contextual-links-wrapper,
+.block-campaignion-language-switcher h2 {
+  display: none!important;
+}
+.block-campaignion-language-switcher .content {
+  position: relative;
+}
+.block-campaignion-language-switcher a {
+  display: block;
+  text-decoration: none;
+  color: #4a4a4a;
+}
+.block-campaignion-language-switcher a:hover,
+.block-campaignion-language-switcher a:focus {
+  color: #565656;
+}
+.block-campaignion-language-switcher a.campaignion-language-switcher-trigger {
+  text-decoration: none;
+  padding: .25em 2.5em .35em 1em;
+  margin-bottom: 0.375em;
+  background-color: #fdfdfd;
+  border: 1px solid #e7e5e1;
+}
+.block-campaignion-language-switcher a.campaignion-language-switcher-trigger:after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 1px;
+  height: 1px;
+  right: 1em;
+  top: 45%;
+  border: 5px solid transparent;
+  border-top-color: #3d3d3d;
+}
+.block-campaignion-language-switcher ul.campaignion-language-switcher-locale-url {
+  z-index: 1;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: 2.445em;
+  border: 1px solid #e7e5e1;
+  background-color: #fdfdfd;
+}
+.block-campaignion-language-switcher ul.campaignion-language-switcher-locale-url li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.block-campaignion-language-switcher ul.campaignion-language-switcher-locale-url li .language-link,
+.block-campaignion-language-switcher ul.campaignion-language-switcher-locale-url li a {
+  padding: .4em 1.2em .4em 1em;
+  min-width: 12.5em;
+  background-color: #fdfdfd;
+}
+.block-campaignion-language-switcher ul.campaignion-language-switcher-locale-url li a:hover,
+.block-campaignion-language-switcher ul.campaignion-language-switcher-locale-url li a:focus {
+  background-color: #ffffff;
+}
+/* ------#### featured ---------------------------------------------- */
 #featured {
   padding: 3em 0;
 }
@@ -3777,10 +3829,12 @@ div.messages li:last-child {
 .node-teaser .node-readmore a:focus {
   background: repeat #f48358;
   border-color: #f27140;
+  color: #fff;
 }
 .node-teaser .node-readmore a:active {
   background: repeat #f05f28;
   border-color: #ef4e10;
+  color: #fff;
 }
 /* ---------- views stuff & views list styling ---------------------- */
 .view .item-list {
@@ -4064,12 +4118,32 @@ ul.recent-supporters li .comment {
   margin-left: -6%;
 }
 /* ---------- node and context specific styles ---------------------- */
+form.share-page textarea#edit-message-value {
+  min-height: 18em;
+}
+form.share-page .filter-wrapper {
+  padding: 0;
+}
+form.share-page .filter-wrapper .filter-help {
+  display: none;
+}
+form.share-page .filter-wrapper .filter-guidelines {
+  padding: 0;
+}
+form.share-page .filter-wrapper .filter-guidelines li {
+  margin-bottom: 0;
+}
+form.share-page .filter-wrapper .filter-guidelines .tips {
+  font-size: 0.85em;
+  color: #636363;
+}
 /* ------#### footer ------------------------------------------------ */
 #footer .menu li {
   display: inline;
   white-space: nowrap;
 }
 #footer .menu li a {
+  display: inline-block;
   color: #777777;
   padding: 0.5em;
 }
@@ -4145,7 +4219,7 @@ ul.recent-supporters li .comment {
   #header #main-menu li a,
   #header #main-menu li a:visited {
     text-transform: none;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans;
+    font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans;
     padding: 0.9em 0.8em;
     font-weight: normal;
     border: 1px solid transparent;
