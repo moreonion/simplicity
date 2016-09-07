@@ -2844,11 +2844,11 @@ legend {
 .webform-client-form h2 {
   margin-bottom: 0;
 }
-.webform-client-form #edit-actions {
+.webform-client-form .form-actions {
   margin-bottom: 3em;
 }
-.webform-client-form #edit-actions #edit-previous,
-.webform-client-form #edit-actions input[id*="previous"] {
+.webform-client-form .form-actions input[id*="previous"],
+.webform-client-form .form-actions .webform-previous {
   position: absolute !important;
   clip: rect(1px 1px 1px 1px);
   /* IE6, IE7 */
