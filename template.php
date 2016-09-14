@@ -56,3 +56,18 @@ function simplicity_system_info_alter(&$info, $file, $type) {
     }
   }
 }
+
+/**
+ * Add extra classes to certain webform elements.
+ */
+function simplicity_preprocess_webform_element(&$variables) {
+  $element = &$variables['element'];
+  $component = $element['#webform_component'];
+
+  $wrapper_classes = [];
+  if ($component['form_key'] == 'donation_amount') {
+    $wrapper_classes[] = 'donation-amount';
+  }
+
+  $element['#wrapper_attributes']['class'] = array_merge($element['#wrapper_attributes']['class'], $wrapper_classes);
+}
