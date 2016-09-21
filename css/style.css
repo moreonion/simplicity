@@ -2885,17 +2885,17 @@ legend {
   }
 }
 /* ---------- donation amount --------------------------------------------- */
-div.webform-component-radios[id*="donation-amount"],
-div.webform-component-select[id*="donation-amount"],
-div.webform-component-select_or_other[id*="donation-amount"] {
+div.webform-component-radios.donation-amount,
+div.webform-component-select.donation-amount,
+div.webform-component-select-or-other.donation-amount {
   max-width: 26em;
   /* donation amount "buttons" */
   /* other amount label */
   /* other amount textfield */
 }
-div.webform-component-radios[id*="donation-amount"] .form-type-radio,
-div.webform-component-select[id*="donation-amount"] .form-type-radio,
-div.webform-component-select_or_other[id*="donation-amount"] .form-type-radio {
+div.webform-component-radios.donation-amount .form-type-radio,
+div.webform-component-select.donation-amount .form-type-radio,
+div.webform-component-select-or-other.donation-amount .form-type-radio {
   display: inline-block;
   float: left;
   width: 28%;
@@ -2903,26 +2903,26 @@ div.webform-component-select_or_other[id*="donation-amount"] .form-type-radio {
   min-width: 3em;
   margin-bottom: 0.5em;
 }
-div.webform-component-radios[id*="donation-amount"] .picker,
-div.webform-component-select[id*="donation-amount"] .picker,
-div.webform-component-select_or_other[id*="donation-amount"] .picker,
-div.webform-component-radios[id*="donation-amount"] .picker .picker-label,
-div.webform-component-select[id*="donation-amount"] .picker .picker-label,
-div.webform-component-select_or_other[id*="donation-amount"] .picker .picker-label {
+div.webform-component-radios.donation-amount .picker,
+div.webform-component-select.donation-amount .picker,
+div.webform-component-select-or-other.donation-amount .picker,
+div.webform-component-radios.donation-amount .picker .picker-label,
+div.webform-component-select.donation-amount .picker .picker-label,
+div.webform-component-select-or-other.donation-amount .picker .picker-label {
   margin: 0;
 }
-div.webform-component-radios[id*="donation-amount"] .picker-radio .picker-handle,
-div.webform-component-select[id*="donation-amount"] .picker-radio .picker-handle,
-div.webform-component-select_or_other[id*="donation-amount"] .picker-radio .picker-handle,
-div.webform-component-radios[id*="donation-amount"] input[type="radio"],
-div.webform-component-select[id*="donation-amount"] input[type="radio"],
-div.webform-component-select_or_other[id*="donation-amount"] input[type="radio"] {
+div.webform-component-radios.donation-amount .picker-radio .picker-handle,
+div.webform-component-select.donation-amount .picker-radio .picker-handle,
+div.webform-component-select-or-other.donation-amount .picker-radio .picker-handle,
+div.webform-component-radios.donation-amount input[type="radio"],
+div.webform-component-select.donation-amount input[type="radio"],
+div.webform-component-select-or-other.donation-amount input[type="radio"] {
   position: absolute;
   left: -99999px;
 }
-div.webform-component-radios[id*="donation-amount"] label.option,
-div.webform-component-select[id*="donation-amount"] label.option,
-div.webform-component-select_or_other[id*="donation-amount"] label.option {
+div.webform-component-radios.donation-amount label.option,
+div.webform-component-select.donation-amount label.option,
+div.webform-component-select-or-other.donation-amount label.option {
   font-size: 1.5em;
   line-height: 1em;
   margin-bottom: 1em;
@@ -2941,29 +2941,29 @@ div.webform-component-select_or_other[id*="donation-amount"] label.option {
   text-align: center;
   visibility: visible;
 }
-div.webform-component-radios[id*="donation-amount"] label.option:hover,
-div.webform-component-select[id*="donation-amount"] label.option:hover,
-div.webform-component-select_or_other[id*="donation-amount"] label.option:hover,
-div.webform-component-radios[id*="donation-amount"] label.option:focus,
-div.webform-component-select[id*="donation-amount"] label.option:focus,
-div.webform-component-select_or_other[id*="donation-amount"] label.option:focus {
+div.webform-component-radios.donation-amount label.option:hover,
+div.webform-component-select.donation-amount label.option:hover,
+div.webform-component-select-or-other.donation-amount label.option:hover,
+div.webform-component-radios.donation-amount label.option:focus,
+div.webform-component-select.donation-amount label.option:focus,
+div.webform-component-select-or-other.donation-amount label.option:focus {
   background-color: #f48358;
   border-color: #f27140;
   text-shadow: #ef4e10 1px 1px 0px;
   color: #fff;
 }
-div.webform-component-radios[id*="donation-amount"] .checked label.option,
-div.webform-component-select[id*="donation-amount"] .checked label.option,
-div.webform-component-select_or_other[id*="donation-amount"] .checked label.option {
+div.webform-component-radios.donation-amount .checked label.option,
+div.webform-component-select.donation-amount .checked label.option,
+div.webform-component-select-or-other.donation-amount .checked label.option {
   background-color: #f05f28;
   border: 1px solid #ef4e10;
   box-shadow: 2px 2px 4px #d7460f inset;
   text-shadow: #ef4e10 1px 1px 0px;
   color: #fff;
 }
-div.webform-component-radios[id*="donation-amount"] .other-amount,
-div.webform-component-select[id*="donation-amount"] .other-amount,
-div.webform-component-select_or_other[id*="donation-amount"] .other-amount {
+div.webform-component-radios.donation-amount .other-amount,
+div.webform-component-select.donation-amount .other-amount,
+div.webform-component-select-or-other.donation-amount .other-amount {
   float: none;
   clear: both;
   display: block;
@@ -2971,18 +2971,18 @@ div.webform-component-select_or_other[id*="donation-amount"] .other-amount {
   margin: 0 auto;
   padding: 0;
 }
-div.webform-component-radios[id*="donation-amount"] .other-amount .checked label,
-div.webform-component-select[id*="donation-amount"] .other-amount .checked label,
-div.webform-component-select_or_other[id*="donation-amount"] .other-amount .checked label,
-div.webform-component-radios[id*="donation-amount"] .other-amount .checked label:hover,
-div.webform-component-select[id*="donation-amount"] .other-amount .checked label:hover,
-div.webform-component-select_or_other[id*="donation-amount"] .other-amount .checked label:hover,
-div.webform-component-radios[id*="donation-amount"] .other-amount label,
-div.webform-component-select[id*="donation-amount"] .other-amount label,
-div.webform-component-select_or_other[id*="donation-amount"] .other-amount label,
-div.webform-component-radios[id*="donation-amount"] .other-amount label:hover,
-div.webform-component-select[id*="donation-amount"] .other-amount label:hover,
-div.webform-component-select_or_other[id*="donation-amount"] .other-amount label:hover {
+div.webform-component-radios.donation-amount .other-amount .checked label,
+div.webform-component-select.donation-amount .other-amount .checked label,
+div.webform-component-select-or-other.donation-amount .other-amount .checked label,
+div.webform-component-radios.donation-amount .other-amount .checked label:hover,
+div.webform-component-select.donation-amount .other-amount .checked label:hover,
+div.webform-component-select-or-other.donation-amount .other-amount .checked label:hover,
+div.webform-component-radios.donation-amount .other-amount label,
+div.webform-component-select.donation-amount .other-amount label,
+div.webform-component-select-or-other.donation-amount .other-amount label,
+div.webform-component-radios.donation-amount .other-amount label:hover,
+div.webform-component-select.donation-amount .other-amount label:hover,
+div.webform-component-select-or-other.donation-amount .other-amount label:hover {
   cursor: default;
   background: transparent;
   border: none;
@@ -3002,18 +3002,18 @@ div.webform-component-select_or_other[id*="donation-amount"] .other-amount label
   width: auto;
   text-align: left;
 }
-div.webform-component-radios[id*="donation-amount"] .select-or-other .form-type-textfield,
-div.webform-component-select[id*="donation-amount"] .select-or-other .form-type-textfield,
-div.webform-component-select_or_other[id*="donation-amount"] .select-or-other .form-type-textfield {
+div.webform-component-radios.donation-amount .select-or-other .form-type-textfield,
+div.webform-component-select.donation-amount .select-or-other .form-type-textfield,
+div.webform-component-select-or-other.donation-amount .select-or-other .form-type-textfield {
   clear: both;
   position: relative;
   width: 28%;
   min-width: 7em;
   margin-top: 0;
 }
-div.webform-component-radios[id*="donation-amount"] .select-or-other .form-type-textfield input,
-div.webform-component-select[id*="donation-amount"] .select-or-other .form-type-textfield input,
-div.webform-component-select_or_other[id*="donation-amount"] .select-or-other .form-type-textfield input {
+div.webform-component-radios.donation-amount .select-or-other .form-type-textfield input,
+div.webform-component-select.donation-amount .select-or-other .form-type-textfield input,
+div.webform-component-select-or-other.donation-amount .select-or-other .form-type-textfield input {
   padding: 0.75em 0.5em;
   padding-left: 1.25em;
   font-size: 1.5em;
@@ -3030,26 +3030,26 @@ div.webform-component-select_or_other[id*="donation-amount"] .select-or-other .f
   color: #b0b0b0;
   font-weight: bold;
 }
-div.webform-component-radios[id*="donation-amount"] .select-or-other .form-type-textfield input:hover,
-div.webform-component-select[id*="donation-amount"] .select-or-other .form-type-textfield input:hover,
-div.webform-component-select_or_other[id*="donation-amount"] .select-or-other .form-type-textfield input:hover,
-div.webform-component-radios[id*="donation-amount"] .select-or-other .form-type-textfield input:active,
-div.webform-component-select[id*="donation-amount"] .select-or-other .form-type-textfield input:active,
-div.webform-component-select_or_other[id*="donation-amount"] .select-or-other .form-type-textfield input:active,
-div.webform-component-radios[id*="donation-amount"] .select-or-other .form-type-textfield input:focus,
-div.webform-component-select[id*="donation-amount"] .select-or-other .form-type-textfield input:focus,
-div.webform-component-select_or_other[id*="donation-amount"] .select-or-other .form-type-textfield input:focus,
-div.webform-component-radios[id*="donation-amount"] .select-or-other .form-type-textfield input.select-or-other-checked,
-div.webform-component-select[id*="donation-amount"] .select-or-other .form-type-textfield input.select-or-other-checked,
-div.webform-component-select_or_other[id*="donation-amount"] .select-or-other .form-type-textfield input.select-or-other-checked {
+div.webform-component-radios.donation-amount .select-or-other .form-type-textfield input:hover,
+div.webform-component-select.donation-amount .select-or-other .form-type-textfield input:hover,
+div.webform-component-select-or-other.donation-amount .select-or-other .form-type-textfield input:hover,
+div.webform-component-radios.donation-amount .select-or-other .form-type-textfield input:active,
+div.webform-component-select.donation-amount .select-or-other .form-type-textfield input:active,
+div.webform-component-select-or-other.donation-amount .select-or-other .form-type-textfield input:active,
+div.webform-component-radios.donation-amount .select-or-other .form-type-textfield input:focus,
+div.webform-component-select.donation-amount .select-or-other .form-type-textfield input:focus,
+div.webform-component-select-or-other.donation-amount .select-or-other .form-type-textfield input:focus,
+div.webform-component-radios.donation-amount .select-or-other .form-type-textfield input.select-or-other-checked,
+div.webform-component-select.donation-amount .select-or-other .form-type-textfield input.select-or-other-checked,
+div.webform-component-select-or-other.donation-amount .select-or-other .form-type-textfield input.select-or-other-checked {
   color: #636363;
   font-weight: bold;
   border: 1px solid #f27140;
   box-shadow: 0 0 1px #f27140 inset;
 }
-div.webform-component-radios[id*="donation-amount"] .select-or-other .form-type-textfield label,
-div.webform-component-select[id*="donation-amount"] .select-or-other .form-type-textfield label,
-div.webform-component-select_or_other[id*="donation-amount"] .select-or-other .form-type-textfield label {
+div.webform-component-radios.donation-amount .select-or-other .form-type-textfield label,
+div.webform-component-select.donation-amount .select-or-other .form-type-textfield label,
+div.webform-component-select-or-other.donation-amount .select-or-other .form-type-textfield label {
   /* currency symbol */
   visibility: visible;
   display: block;
