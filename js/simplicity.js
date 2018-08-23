@@ -30,6 +30,7 @@ Drupal.behaviors.mobilemenu.attach = function(context, settings) {
 
 Drupal.behaviors.showMore = {};
 Drupal.behaviors.showMore.attach = function (context, settings) {
+  // Link for revealing more info.
   $('.show-more', context).each(function () {
     var $toggle = $(this);
     var $target = $($toggle.attr('href'));
@@ -42,6 +43,11 @@ Drupal.behaviors.showMore.attach = function (context, settings) {
         e.preventDefault();
       });
     }
+  });
+  // Class for smooth scrolling to anchor.
+  $('a.scroll', context).on('click', function (e) {
+    $('html,body').animate({scrollTop:$(e.currentTarget.hash).offset().top}, 500);
+    e.preventDefault();
   });
 };
 
