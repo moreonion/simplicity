@@ -15,7 +15,7 @@ Drupal.behaviors.clickableTeasers.attach = function(context, settings) {
   $('.node-teaser', context).click(function(event) {
     window.location.href = $('.node-readmore a', this).attr('href');
   }).addClass('clickable');
-}
+};
 
 Drupal.behaviors.mobilemenu = {};
 Drupal.behaviors.mobilemenu.attach = function(context, settings) {
@@ -28,6 +28,22 @@ Drupal.behaviors.mobilemenu.attach = function(context, settings) {
   }
 };
 
+Drupal.behaviors.showMore = {};
+Drupal.behaviors.showMore.attach = function (context, settings) {
+  $('.show-more', context).each(function () {
+    var $toggle = $(this);
+    var $target = $($toggle.attr('href'));
+
+    if ($toggle.is(':visible') && $target.length) {
+      $target.hide();
+      $toggle.on('click', function (e) {
+        $toggle.hide();
+        $target.slideDown();
+        e.preventDefault();
+      });
+    }
+  });
+};
 
 Drupal.behaviors.selectOrOther = {};
 Drupal.behaviors.selectOrOther.attach = function(context, settings) {
