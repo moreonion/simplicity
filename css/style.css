@@ -61,7 +61,7 @@
 /* ---------- font sizes -------------------------------------------- */
 .small {
   font-size: 75%;
-  line-height: 1.125em;
+  line-height: 1.125rem;
 }
 /* ---------- cross browser stuff ----------------------------------- */
 .element-invisible {
@@ -199,7 +199,7 @@ html {
 body {
   margin: 0;
   font-size: 100%;
-  line-height: 1.5em;
+  line-height: 1.5rem;
 }
 body,
 button,
@@ -228,7 +228,7 @@ strong {
   font-weight: bold;
 }
 blockquote {
-  margin: 1.5em 0;
+  margin: 1.5rem 0;
 }
 dfn {
   font-style: italic;
@@ -237,7 +237,7 @@ hr {
   display: block;
   height: 1px;
   border: 0;
-  margin: 1.5em 0;
+  margin: 1.5rem 0;
   padding: 0;
 }
 ins {
@@ -276,13 +276,13 @@ q:after {
 }
 small {
   font-size: 75%;
-  line-height: 1.125em;
+  line-height: 1.125rem;
 }
 /* Position subscript and superscript content without affecting line-height: h5bp.com/k */
 sub,
 sup {
   font-size: 75%;
-  line-height: 1.125em;
+  line-height: 1.125rem;
   line-height: 0;
   position: relative;
   vertical-align: baseline;
@@ -298,7 +298,7 @@ sub {
    ========================================================================== */
 ul,
 ol {
-  margin: 1.5em 0;
+  margin: 1.5rem 0;
   padding: 0;
 }
 dd {
@@ -2674,11 +2674,11 @@ form {
 }
 .form-item,
 .form-action {
-  margin-bottom: 0.5em;
+  margin-bottom: 0.5rem;
 }
 fieldset {
-  margin-top: 1.5em;
-  margin-bottom: 1.5em;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 /* ---------- buttons ----------------------------------------------- */
 input[type="submit"],
@@ -2738,12 +2738,13 @@ textarea,
 select,
 .selecter .selecter-selected {
   font-size: 120%;
+  line-height: 1.5rem;
   background-color: #fff;
   border: 1px solid #cccccc;
   font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans;
   font-weight: normal;
   color: #303030;
-  padding: .5em;
+  padding: 0.75rem 0.5em;
   width: 100%;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -2812,8 +2813,8 @@ select {
 /* ---------- label, legend, description --------------------------- */
 .description {
   font-size: 75%;
-  line-height: 1.125em;
-  margin-top: 0.375em;
+  line-height: 1.125rem;
+  margin-top: 0.375rem;
   color: #636363;
 }
 label,
@@ -2856,7 +2857,7 @@ legend {
 }
 .ajax-progress-throbber {
   position: absolute;
-  bottom: 0.75em;
+  bottom: 0.75rem;
 }
 /* ---------- webform steps ----------------------------------------------- */
 .webform-progressbar {
@@ -2937,7 +2938,7 @@ div.webform-component-select-or-other.donation-amount label.option {
   display: block;
   font-weight: bold;
   margin-bottom: 0.375em;
-  padding: 0.75em 0;
+  padding: 0.75rem 0;
   text-align: center;
   visibility: visible;
 }
@@ -3014,7 +3015,7 @@ div.webform-component-select-or-other.donation-amount .select-or-other .form-typ
 div.webform-component-radios.donation-amount .select-or-other .form-type-textfield input,
 div.webform-component-select.donation-amount .select-or-other .form-type-textfield input,
 div.webform-component-select-or-other.donation-amount .select-or-other .form-type-textfield input {
-  padding: 0.75em 0.5em;
+  padding: 0.75rem 0.5em;
   padding-left: 1.25em;
   font-size: 1.5em;
   line-height: 1em;
@@ -3055,7 +3056,7 @@ div.webform-component-select-or-other.donation-amount .select-or-other .form-typ
   display: block;
   position: absolute;
   height: auto;
-  padding: 0.75em 0.5em;
+  padding: 0.75rem 0.5em;
   width: auto;
   left: 0;
   font-size: 1.5em;
@@ -3082,7 +3083,7 @@ div.webform-component-select-or-other.donation-amount .select-or-other .form-typ
   position: relative;
 }
 #search-form #edit-advanced {
-  margin-bottom: 3em;
+  margin-bottom: 3rem;
 }
 #search-block-form,
 #search-form #edit-basic {
@@ -3319,7 +3320,7 @@ p,
 ul,
 ol,
 li {
-  margin-bottom: 1.5em;
+  margin-bottom: 1.5rem;
 }
 li {
   list-style-position: inside;
@@ -3356,6 +3357,9 @@ img {
 }
 .media-youtube-video {
   padding-top: 35px;
+}
+.media-type-video .file-video video {
+  width: 100%;
 }
 /* ---------- headings ---------------------------------------------- */
 h1 {
@@ -3453,14 +3457,14 @@ a.close:hover {
 }
 div.messages {
   position: relative;
-  margin: 0.75em 0;
-  padding: 0.75em 1.5em;
+  margin: 0.75rem 0;
+  padding: 0.75rem 1.5em;
   padding-right: 3em;
   background-image: none;
 }
 div.messages li {
   list-style-position: outside;
-  margin-bottom: 0.75em;
+  margin-bottom: 0.75rem;
 }
 div.messages li:last-child {
   margin-bottom: 0;
@@ -3532,7 +3536,7 @@ div.messages li:last-child {
   /* end of second level */
 }
 #main-menu li {
-  padding: 0.375em 0 0;
+  padding: 0.375rem 0 0;
 }
 #main-menu a,
 #main-menu a:visited {
@@ -3700,7 +3704,7 @@ div.messages li:last-child {
 /* ------ language switcher ----------------------------------------- */
 .block-campaignion-language-switcher {
   float: right;
-  margin-top: 0.75em;
+  margin-top: 0.75rem;
   margin-left: .5em;
   font-size: 0.92em;
 }
@@ -3726,7 +3730,7 @@ div.messages li:last-child {
 .block-campaignion-language-switcher a.campaignion-language-switcher-trigger {
   text-decoration: none;
   padding: .25em 2.5em .35em 1em;
-  margin-bottom: 0.375em;
+  margin-bottom: 0.375rem;
   background-color: #fdfdfd;
   border: 1px solid #e7e5e1;
 }
@@ -3748,7 +3752,7 @@ div.messages li:last-child {
   padding: 0;
   position: absolute;
   right: 0;
-  top: 2.445em;
+  top: 2.25rem;
   border: 1px solid #e7e5e1;
   background-color: #fdfdfd;
 }
@@ -3769,16 +3773,16 @@ div.messages li:last-child {
 }
 /* ------#### featured ---------------------------------------------- */
 #featured {
-  padding: 3em 0;
+  padding: 3rem 0;
 }
 /* ------#### main -------------------------------------------------- */
 #main {
-  padding-top: 2.25em;
-  padding-bottom: 3em;
+  padding-top: 2.25rem;
+  padding-bottom: 3rem;
 }
 #main .region-content-top,
 #main .region-content {
-  margin-bottom: 1.5em;
+  margin-bottom: 1.5rem;
 }
 .no-sidebars #content .section {
   max-width: 900px;
@@ -3787,14 +3791,14 @@ div.messages li:last-child {
 }
 /* ---------- sidebar ----------------------------------------------- */
 .sidebar .block {
-  margin-bottom: 1.5em;
+  margin-bottom: 1.5rem;
 }
 /* ---------- node styles ------------------------------------------- */
 /* ---------- teaser styles ----------------------------------------- */
 .node-teaser {
   background-color: #f2f1ef;
-  padding: 1.5em;
-  margin-bottom: 1.5em;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
   border: 1px solid #dddcd8;
 }
 .node-teaser h2,
@@ -3802,7 +3806,7 @@ div.messages li:last-child {
   color: #303030;
 }
 .node-teaser .field-name-field-main-image {
-  margin-bottom: 1.5em;
+  margin-bottom: 1.5rem;
 }
 .node-teaser .node-readmore a {
   background: #f27140 repeat-x top;
@@ -3822,7 +3826,7 @@ div.messages li:last-child {
   -o-border-radius: 4px;
   border-radius: 4px;
   display: inline-block;
-  padding: 0.75em 1.5em;
+  padding: 0.75rem 1.5em;
   float: right;
 }
 .node-teaser .node-readmore a:hover,
@@ -3843,7 +3847,7 @@ div.messages li:last-child {
 .view .item-list li.views-row {
   list-style: none;
   margin-left: 0;
-  margin-bottom: 1.5em;
+  margin-bottom: 1.5rem;
 }
 /* ---------- comments ---------------------------------------------- */
 /* ---------- field specific styles --------------------------------- */
@@ -3924,7 +3928,7 @@ ul.recent-supporters {
   margin: 0;
 }
 ul.recent-supporters li {
-  padding: 0.375em 0 0.375em 0.5em;
+  padding: 0.375rem 0 0.375rem 0.5em;
   border: none;
   border-bottom: 1px solid #dddcd8;
   background-color: transparent;
@@ -3950,7 +3954,7 @@ ul.recent-supporters li .comment {
 }
 /* pgbar styling - progress bar */
 .pgbar-wrapper {
-  padding: 0.75em 3%;
+  padding: 0.75rem 3%;
   background: #f2f1ef;
   color: #636363;
   border: 1px solid #dddcd8;
@@ -3958,8 +3962,8 @@ ul.recent-supporters li .comment {
   margin-bottom: 1.5em;
 }
 .pgbar-wrapper p {
-  margin-bottom: 0.375em;
-  margin-top: 0.375em;
+  margin-bottom: 0.375rem;
+  margin-top: 0.375rem;
 }
 .pgbar-wrapper p span {
   display: block;
@@ -4011,14 +4015,14 @@ ul.recent-supporters li .comment {
   min-height: 235px;
 }
 .pgbar-wrapper-thermometer p {
-  margin-bottom: 1.5em;
-  margin-top: 1.5em;
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
 }
 .pgbar-wrapper-thermometer .thermometer {
   width: 74px;
   height: 235px;
   position: absolute;
-  top: 0.75em;
+  top: 0.75rem;
   margin-left: -100px;
 }
 .pgbar-wrapper-thermometer .thermometer .pgbar-bg {
@@ -4098,8 +4102,8 @@ ul.recent-supporters li .comment {
 }
 /* letter styling (optional class) */
 .letter {
-  padding: 1.5em 5% 0;
-  margin-bottom: 1.5em;
+  padding: 1.5rem 5% 0;
+  margin-bottom: 1.5rem;
   border: 1px solid #e9e8e6;
   -webkit-box-shadow: 0 2px 3px #dddcd8;
   -moz-box-shadow: 0 2px 3px #dddcd8;
@@ -4110,7 +4114,7 @@ ul.recent-supporters li .comment {
   position: relative;
 }
 .block-webform-block .content {
-  padding: 0.75em 4% 0.75em;
+  padding: 0.75rem 4% 0.75rem;
   background: #f2f1ef;
   border: 1px solid #D4D4D4;
 }

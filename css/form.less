@@ -54,12 +54,13 @@ input[type="submit"]:active, #edit-submit:active, .button:active, a.button:activ
 
 input[type="text"], input[type="email"],input[type="number"], input[type="password"], input[type="search"], .form-text input, .form-type-password input, textarea, select, .selecter .selecter-selected {
   font-size: 120%;
+  line-height: @oneline;
   background-color: @mywhite;
   border: 1px solid darken(@background, 20%);
   font-family: @sans;
   font-weight: normal;
   color: @fmain;
-  padding: .5em;
+  padding: @oneline/2 .5em;
   width: 100%;
   .boxsizing(border-box);
 }
