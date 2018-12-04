@@ -31,8 +31,8 @@
   @multiplier: ceil(1/(@lineheight/@fontsize));
   // font-size: the argument (px) expressed in em, related to @basefontsize
   font-size: (@fontsize/@basefontsize)*1em;
-  // line-height: the closest multiple of @baselineheight, expressed in em
-  line-height: ((@baselineheight*@multiplier)/@fontsize)*1em;
+  // line-height: the closest multiple of @lineheight, expressed in em
+  line-height: ((@lineheight*@multiplier)/@fontsize)*1em;
   // margin-bottom: always the @baselineheight expressed in em
   margin-bottom: (@baselineheight/@fontsize)*1em;
 }

@@ -52,20 +52,22 @@ input[type="submit"]:active, #edit-submit:active, .button:active, a.button:activ
 
 /* ---------- input ------------------------------------------------- */
 
-input[type="text"], input[type="email"],input[type="number"], input[type="password"], input[type="search"], .form-text input, .form-type-password input, textarea, select, .selecter .selecter-selected {
+input[type="text"], input[type="email"],input[type="number"], input[type="password"], input[type="search"], .form-text input, .form-type-password input, textarea, select, .selecter .selecter-selected, .select2-container .select2-selection, .select2-container .select2-search--dropdown .select2-search__field {
   font-size: 120%;
+  line-height: @oneline;
   background-color: @mywhite;
   border: 1px solid darken(@background, 20%);
   font-family: @sans;
   font-weight: normal;
   color: @fmain;
-  padding: .5em;
+  padding: @oneline/2 .5em;
   width: 100%;
   .boxsizing(border-box);
 }
 
 input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus,
-.form-text input:focus, .form-type-password input:focus, select:focus, textarea:focus {
+.form-text input:focus, .form-type-password input:focus, select:focus, textarea:focus,
+.select2-container.select2-container--focus .select2-selection, .select2-search__field:focus {
   background: @mywhite none;
   border: 1px solid darken(@background, 15%);
   color: @fmain;
@@ -130,6 +132,65 @@ select {
   .selecter-options, .selecter-item {
     .boxsizing(border-box);
   }
+  .selecter-item.selected {
+    display: none;
+  }
+  .selecter-item:hover, .selecter-item:focus {
+    color: @mywhite;
+    background-color: lighten(@primary_color, 5%);
+  }
+}
+
+select + .select2-container {
+  min-width: 100%;
+}
+.select2-container .select2-selection {
+  height: auto;
+  min-height: @oneline*2;
+
+  .select2-selection__placeholder {
+    color: @fmain;
+  }
+
+  &.select2-selection--single {
+    .select2-selection__rendered {
+      color: @fmain;
+      line-height: inherit;
+    }
+    .select2-selection__arrow {
+      height: 100%;
+      width: 40px;
+      b {
+        border-left-width: 5px;
+        border-right-width: 5px;
+      }
+    }
+  }
+}
+
+.select2-dropdown {
+  border-color: darken(@background, 15%);
+  .boxshadow(0, 2px, 2px, rgba(0, 0, 0, 0.25));
+
+  .select2-results {
+    margin: 0;
+    padding: 0;
+
+    .select2-results__option {
+      margin: 0;
+    }
+    .select2-results__option--highlighted[aria-selected] {
+      color: @mywhite;
+      background-color: lighten(@primary_color, 5%);
+    }
+    .select2-results__option[aria-selected=true] {
+      display: none;
+    }
+    .select2-results__message, .loading-results {
+      .small;
+      color: @fmain;
+    }
+  }
 }
 
 /* ---------- label, legend, description --------------------------- */
@@ -162,6 +223,7 @@ legend {
 .form-item textarea.error,
 .form-item select.error,
 .form-item select.error + .selecter .selecter-selected,
+.form-item select.error + .select2-container .select2-selection,
 .form-item input.error + .picker .picker-handle {
   border: 2px solid @error;
 }
