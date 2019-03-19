@@ -3867,6 +3867,10 @@ div.messages li:last-child {
   margin-left: auto;
   margin-right: auto;
 }
+/* ------#### overlay ----------------------------------------------- */
+.campaignion-overlay {
+  max-width: 45em;
+}
 /* ---------- sidebar ----------------------------------------------- */
 .sidebar .block {
   margin-bottom: 1.5rem;
@@ -3993,6 +3997,9 @@ div.messages li:last-child {
 }
 .block-share-light ul.share-light .instagram a span:before {
   background-position: -200px center;
+}
+.block-share-light ul.share-light .fbmsg a span:before {
+  background-position: -250px center;
 }
 /* recent supporters */
 .no-activity-yet {
@@ -4177,6 +4184,23 @@ ul.recent-supporters li .comment {
 }
 .node-teaser .pgbar-current {
   height: 15px;
+}
+/* flipclock7 countdown styling */
+.flipclock7 .flip-clock-wrapper {
+  width: inherit;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+}
+.flipclock7 .flip-clock-wrapper ul {
+  font-size: 2.25rem;
+  height: 2.625rem;
+  /* the line-height defines the position of the numbers within the rectangle flip */
+}
+.flipclock7 .flip-clock-wrapper ul li {
+  line-height: 3rem;
+}
+.flipclock7 .flip-clock-divider {
+  height: 2.625rem;
 }
 /* letter styling (optional class) */
 .letter {
