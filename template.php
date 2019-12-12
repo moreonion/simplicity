@@ -71,3 +71,21 @@ function simplicity_preprocess_webform_element(&$variables) {
 
   $element['#wrapper_attributes']['class'] = array_merge($element['#wrapper_attributes']['class'], $wrapper_classes);
 }
+
+/**
+ * Remove webform fields that start with 'below_button' from the form and push
+ * them to the end of the form array so they are rendered after the buttons.
+ */
+function simplicity_preprocess_webform_form(&$vars) {
+  $identifier = 'below_button';
+  $below_button = array();
+
+  foreach ($vars['form']['submitted'] as $key => $value) {
+    if (substr($key, 0, strlen($identifier)) === $identifier) {
+      $below_button[$key] = $value;
+      unset($vars['form']['submitted'][$key]);
+    }
+  }
+
+  $vars['form']['below_button'] = $below_button;
+}
